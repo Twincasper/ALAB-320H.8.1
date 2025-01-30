@@ -13,11 +13,14 @@ function App() {
     }, []);
 
     return (
-        <div className="starship-list">
-            {starships.map(starship => (
-                <Starship key={starship.url} starship={starship} />
-            ))}
-        </div>
+        <>
+            <h1>STAR WARS STARSHIPS</h1>
+            <div className="starship-list">
+                {starships.map(starship => (
+                    <Starship key={starship.url} starship={starship} />
+                ))}
+            </div>
+        </>
     );
 }
 
