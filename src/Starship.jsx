@@ -1,6 +1,3 @@
-import getAllStarships from "./services/sw-api";
-
-
 export function Starship({ starship }) {
     return (
         <div className="starship-card">

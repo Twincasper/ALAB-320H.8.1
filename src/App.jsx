@@ -6,8 +6,19 @@ import { Starship } from './Starship';
 
 function App() {
 
-  return (
-  )
+    const [starships, setStarships] = useState([]);
+
+    useEffect(() => {
+        getAllStarships().then(data => setStarships(data));
+    }, []);
+
+    return (
+        <div className="starship-list">
+            {starships.map(starship => (
+                <Starship key={starship.url} starship={starship} />
+            ))}
+        </div>
+    );
 }
 
 export default App
